@@ -1,6 +1,6 @@
 package com.ankamagames.dofus.datacenter.items.criterion
 {
-   import com.ankamagames.dofus.datacenter.servers.ServerSeason;
+   import com.ankamagames.dofus.datacenter.seasons.ServerSeason;
    import com.ankamagames.jerakine.interfaces.IDataCenter;
    
    public class ServerSeasonTemporisCriterion extends ItemCriterion implements IDataCenter

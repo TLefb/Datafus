@@ -4,7 +4,7 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.datacenter.alliance.AllianceRank;
    import com.ankamagames.dofus.datacenter.guild.GuildRank;
-   import com.ankamagames.dofus.datacenter.servers.ServerSeason;
+   import com.ankamagames.dofus.datacenter.seasons.ServerSeason;
    import com.ankamagames.dofus.externalnotification.ExternalNotificationManager;
    import com.ankamagames.dofus.externalnotification.enums.ExternalNotificationTypeEnum;
    import com.ankamagames.dofus.internalDatacenter.DataEnum;
@@ -1727,8 +1727,9 @@ package com.ankamagames.dofus.logic.game.common.frames
                return true;
             case msg is GuildInformationsGeneralMessage:
                gigmsg = msg as GuildInformationsGeneralMessage;
-               KernelEventsManager.getInstance().processCallback(SocialHookList.GuildInformationsGeneral,gigmsg.expLevelFloor,gigmsg.experience,gigmsg.expNextLevelFloor,gigmsg.level,gigmsg.abandonnedPaddock);
+               KernelEventsManager.getInstance().processCallback(SocialHookList.GuildInformationsGeneral,gigmsg.expLevelFloor,gigmsg.experience,gigmsg.expNextLevelFloor,gigmsg.level,gigmsg.abandonnedPaddock,gigmsg.score);
                this._guild.level = gigmsg.level;
+               this._guild.score = gigmsg.score;
                this._guild.experience = gigmsg.experience;
                this._guild.expLevelFloor = gigmsg.expLevelFloor;
                this._guild.expNextLevelFloor = gigmsg.expNextLevelFloor;
