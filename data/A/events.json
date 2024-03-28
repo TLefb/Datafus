@@ -14347,9 +14347,7 @@
 			"INetworkType"
 		],
 		"attributes": {
-			"unknown": "Short",
-			"actionId": "VarShort",
-			"value": "VarShort"
+			"actionId": "VarShort"
 		}
 	},
 	{

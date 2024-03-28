@@ -11,14 +11,14 @@ package com.ankamagames.dofus.logic.game.common.actions
       
       public var categories:Vector.<uint>;
       
-      public var targetId:uint;
+      public var targetId:Number;
       
       public function ReportPlayerAction(params:Array = null)
       {
          super(params);
       }
       
-      public static function create(targetId:uint, categories:Vector.<uint>, description:String) : ReportPlayerAction
+      public static function create(targetId:Number, categories:Vector.<uint>, description:String) : ReportPlayerAction
       {
          var action:ReportPlayerAction = new ReportPlayerAction(arguments);
          action.description = description;

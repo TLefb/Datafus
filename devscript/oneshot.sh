@@ -11,3 +11,4 @@ rm -rf data/B/entities_json/*
 python3.10 src/B1.py data/U/common/ data/B/entities_json/
 python3.10 src/C1.py data/U/i18n/ data/C/translations_json/
 ./devscript/split.sh data/B/entities_json/
+rm -rf data/U
