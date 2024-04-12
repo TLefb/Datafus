@@ -213,6 +213,18 @@ def main(search_folder, output_file):
     reader = NetworkActionScriptReader(search_folder)
     # Build the dict
     data = reader.parse()
+    # TEMP FIX : ObjectEffect class miss some attributes, making the parsing wrong.
+    # TODO : Understand why the as file lack these attributes ??
+    for entry in data:
+        if entry['class_name'] == 'ObjectEffect':
+            # Ensure the attributes are in the specific order desired
+            new_attributes = {
+                'unknown': 'Short',  # New field added first
+                'actionId': entry['attributes'].get('actionId', 'VarShort'),  # Preserve existing or add default
+                'value': 'VarShort'  # New field added last
+            }
+            entry['attributes'] = new_attributes  # Replace old attributes with new ordered ones
+    
     # Save dict
     save_json(output_file, data)
 
