@@ -2833,6 +2833,32 @@
 			"mimickable": false,
 			"craftXpRatio": -1,
 			"evolutiveTypeId": 0
+		},
+		{
+			"id": 299,
+			"nameId": 1076044,
+			"superTypeId": 25,
+			"categoryId": 5,
+			"isInEncyclopedia": true,
+			"plural": false,
+			"gender": 1,
+			"rawZone": "null",
+			"mimickable": false,
+			"craftXpRatio": -1,
+			"evolutiveTypeId": 0
+		},
+		{
+			"id": 300,
+			"nameId": 1076049,
+			"superTypeId": 25,
+			"categoryId": 5,
+			"isInEncyclopedia": true,
+			"plural": false,
+			"gender": 1,
+			"rawZone": "null",
+			"mimickable": false,
+			"craftXpRatio": -1,
+			"evolutiveTypeId": 0
 		}
 	]
 }

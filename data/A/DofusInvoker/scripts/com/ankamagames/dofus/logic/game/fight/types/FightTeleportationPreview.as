@@ -348,7 +348,10 @@ package com.ankamagames.dofus.logic.game.fight.types
                {
                   ac.hide(false);
                }
-               fightContextFrame.entitiesFrame.updateEntityIconPosition(this._previewIdEntityIdAssoc[ac.id]);
+               if(fightContextFrame)
+               {
+                  fightContextFrame.entitiesFrame.updateEntityIconPosition(this._previewIdEntityIdAssoc[ac.id]);
+               }
             }
          }
          this._removed = true;

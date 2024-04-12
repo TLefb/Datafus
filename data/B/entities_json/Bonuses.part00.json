@@ -5126,14 +5126,6 @@
 			]
 		},
 		{
-			"id": 523,
-			"type": 20,
-			"amount": 1000,
-			"criterionsIds": [
-				2973
-			]
-		},
-		{
 			"id": 524,
 			"type": 10,
 			"amount": 10,
@@ -5169,6 +5161,14 @@
 			"amount": 10,
 			"criterionsIds": [
 				2966
+			]
+		},
+		{
+			"id": 523,
+			"type": 20,
+			"amount": 400,
+			"criterionsIds": [
+				2973
 			]
 		}
 	]

@@ -1,6 +1,5 @@
 package com.ankamagames.dofus.scripts
 {
-   import com.ankamagames.atouin.utils.DataMapProvider;
    import com.ankamagames.dofus.datacenter.effects.EffectInstance;
    import com.ankamagames.dofus.datacenter.spells.BoundScriptUsageData;
    import com.ankamagames.dofus.datacenter.spells.EffectZone;
@@ -9,6 +8,7 @@ package com.ankamagames.dofus.scripts
    import com.ankamagames.dofus.internalDatacenter.spells.SpellWrapper;
    import com.ankamagames.dofus.kernel.Kernel;
    import com.ankamagames.dofus.logic.game.common.frames.AbstractEntitiesFrame;
+   import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    import com.ankamagames.dofus.logic.game.common.misc.DofusEntities;
    import com.ankamagames.dofus.logic.game.common.misc.ISpellCastSequence;
    import com.ankamagames.dofus.logic.game.fight.frames.FightEntitiesFrame;
@@ -146,7 +146,7 @@ package com.ankamagames.dofus.scripts
          {
             return new Vector.<SpellScriptContext>();
          }
-         if(DataMapProvider.getInstance().isInFight)
+         if(PlayedCharacterManager.getInstance().isFighting)
          {
             entitiesFrame = Kernel.getWorker().getFrame(FightEntitiesFrame) as FightEntitiesFrame;
          }
@@ -154,8 +154,12 @@ package com.ankamagames.dofus.scripts
          {
             entitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
          }
-         var entitiesIds:Vector.<Number> = entitiesFrame.getEntitiesIdsList();
          var scriptIds:Vector.<SpellScriptContext> = new Vector.<SpellScriptContext>();
+         if(!entitiesFrame)
+         {
+            return scriptIds;
+         }
+         var entitiesIds:Vector.<Number> = entitiesFrame.getEntitiesIdsList();
          for each(usageData in randomizedUsageData)
          {
             if(SpellScriptUsageUtils.isSpellLevelMatch(spell,usageData.spellLevels))

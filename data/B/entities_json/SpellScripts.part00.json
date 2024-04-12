@@ -55172,8 +55172,8 @@
 		},
 		{
 			"id": 12616,
-			"typeId": 2,
-			"rawParams": "animId:5,missileGfxId:5369,missileGfxYOffset:2,missileCurvature:0,missileSpeed:-2,missileOrientedToCurve:1"
+			"typeId": 1,
+			"rawParams": "animId:11016,targetGfxId:3854"
 		},
 		{
 			"id": 12618,
@@ -63941,6 +63941,11 @@
 			"rawParams": "animId:702,targetGfxId:4392,targetGfxId2:4379,targetGfxShowUnder2:1"
 		},
 		{
+			"id": 14959,
+			"typeId": 1,
+			"rawParams": "targetGfxId:4461"
+		},
+		{
 			"id": 14960,
 			"typeId": 1,
 			"rawParams": "animId:0"
@@ -68724,6 +68729,11 @@
 			"id": 16577,
 			"typeId": 1,
 			"rawParams": "animId:166311,targetGfxId:4261,targetGfxId2:4738"
+		},
+		{
+			"id": 16579,
+			"typeId": 1,
+			"rawParams": "animId:705,targetGfxId:7602,targetGfxDisplayType:2"
 		}
 	]
 }
