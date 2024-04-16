@@ -224,11 +224,7 @@ package com.ankamagames.dofus.scripts
       
       public function resolveScriptUsageFromCastContext(castSequenceContext:SpellCastSequenceContext, specificTargetedCellId:int = -1) : Vector.<SpellScriptContext>
       {
-         var spell:SpellWrapper = SpellWrapper.getSpellWrapperById(castSequenceContext.spellData.id,castSequenceContext.casterId);
-         if(spell === null)
-         {
-            spell = SpellWrapper.create(castSequenceContext.spellData.id,castSequenceContext.spellLevelData.grade,true,castSequenceContext.casterId);
-         }
+         var spell:SpellWrapper = SpellWrapper.create(castSequenceContext.spellData.id,castSequenceContext.spellLevelData.grade,false,castSequenceContext.casterId);
          return this.resolveScriptUsage(spell,castSequenceContext.isCriticalHit,castSequenceContext.casterId,specificTargetedCellId != -1 ? int(specificTargetedCellId) : int(castSequenceContext.targetedCellId));
       }
    }

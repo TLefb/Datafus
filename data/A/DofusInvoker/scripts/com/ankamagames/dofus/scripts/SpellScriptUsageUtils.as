@@ -100,7 +100,14 @@ package com.ankamagames.dofus.scripts
       public static function isTargetMatch(scriptZone:Custom, casterId:Number, entityInfo:GameFightFighterInformations, targetEffect:EffectInstance) : Boolean
       {
          var entityCellId:int = entityInfo.disposition.cellId;
-         return entityInfo.spawnInfo.alive && scriptZone.getCells().indexOf(entityCellId) !== -1 && DamageUtil.verifySpellEffectMask(casterId,entityInfo.contextualId,targetEffect,entityCellId);
+         if(targetEffect.targetMask && (casterId !== entityInfo.contextualId || targetEffect.targetMask.indexOf("C") === -1))
+         {
+            if(scriptZone.getCells().indexOf(entityCellId) === -1)
+            {
+               return false;
+            }
+         }
+         return entityInfo.spawnInfo.alive && DamageUtil.verifySpellEffectMask(casterId,entityInfo.contextualId,targetEffect,entityCellId);
       }
       
       public static function getRandomizedUsageData(allUsageData:Vector.<BoundScriptUsageData>) : Vector.<BoundScriptUsageData>

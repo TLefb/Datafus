@@ -527,6 +527,10 @@ package com.ankamagames.berilia
          {
             return this._aUiList[sName];
          }
+         if(!uiData)
+         {
+            return suiContainer;
+         }
          if(loadingCallback)
          {
             KernelEventsManager.getInstance().processCallback(BeriliaHookList.UiLoading,sName,uiData.name,properties);
