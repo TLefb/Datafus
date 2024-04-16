@@ -2,6 +2,7 @@ import struct
 import json
 import sys
 import os
+import math
 
 VERBOSE = 0
 
