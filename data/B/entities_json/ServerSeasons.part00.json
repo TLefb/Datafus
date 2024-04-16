@@ -1,0 +1,112 @@
+{
+	"def": [
+		{
+			"memberName": "ServerSeason",
+			"packageName": "com.ankamagames.dofus.datacenter.seasons",
+			"fields": [
+				{
+					"name": "uid",
+					"type": -1
+				},
+				{
+					"name": "nameId",
+					"type": -5
+				},
+				{
+					"name": "seasonNumber",
+					"type": -1
+				},
+				{
+					"name": "beginning",
+					"type": -4
+				},
+				{
+					"name": "closure",
+					"type": -4
+				},
+				{
+					"name": "resetDate",
+					"type": -4
+				},
+				{
+					"name": "flagObjectId",
+					"type": -1
+				}
+			]
+		}
+	],
+	"data": [
+		{
+			"uid": 1,
+			"nameId": 1057964,
+			"seasonNumber": 1,
+			"beginning": 1524610800000.0,
+			"closure": 1532991600000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 2,
+			"nameId": 1057965,
+			"seasonNumber": 2,
+			"beginning": 1548720000000.0,
+			"closure": 1554850800000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 3,
+			"nameId": 1057966,
+			"seasonNumber": 2,
+			"beginning": 1533078000000.0,
+			"closure": 1548720000000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 4,
+			"nameId": 1057967,
+			"seasonNumber": 3,
+			"beginning": 1563231600000.0,
+			"closure": 1569884400000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 5,
+			"nameId": 1057968,
+			"seasonNumber": 4,
+			"beginning": 1579737600000.0,
+			"closure": 1596236400000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 14,
+			"nameId": 1057969,
+			"seasonNumber": 5,
+			"beginning": 1612137600000.0,
+			"closure": 1625612400000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 16,
+			"nameId": 1057970,
+			"seasonNumber": 6,
+			"beginning": 1625698800000.0,
+			"closure": 1640995200000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		},
+		{
+			"uid": 24,
+			"nameId": 1057971,
+			"seasonNumber": 7,
+			"beginning": 1682982000000.0,
+			"closure": 1700611200000.0,
+			"resetDate": -3600000.0,
+			"flagObjectId": 20763
+		}
+	]
+}
