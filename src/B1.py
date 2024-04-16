@@ -60,7 +60,8 @@ class D2OReader():
 
     def readDouble(self):
         r = struct.unpack('>d', self.readBytes(8))
-        return r[0]
+        value = r[0]
+        return None if math.isnan(value) else value  # Check for NaN and replace it
 
     def readShort(self):
         r = struct.unpack('>h', self.readBytes(2))
@@ -123,19 +124,20 @@ class D2OReader():
         for field in obj['fields']:
             fieldType = field['type']
             log("Reading " + field['name'] + " of type " + str(fieldType))
-            log(self.data[self.offset: self.offset+30])
-            if(fieldType > 0):
+            if fieldType > 0:
                 classId = self.readInt()
                 if classId not in self.classes:
                     classId = fieldType
-                ret[field['name']] = self.readObject(self.classes[classId])
-
+                obj_value = self.readObject(self.classes[classId])
             else:
-                func = self.fieldType[fieldType]
-                if(fieldType != -99):
-                    ret[field['name']] = func()
+                func = self.fieldType.get(fieldType)
+                if func:
+                    obj_value = func()
                 else:
-                    ret[field['name']] = self.readList(field)
+                    obj_value = None  # Assume None for undefined type handlers or bad data
+
+            # Assign the value handling NaN globally for all fields
+            ret[field['name']] = None if obj_value is math.nan else obj_value
 
         return ret
 
