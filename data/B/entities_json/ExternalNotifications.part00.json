@@ -573,6 +573,32 @@
 			"messageId": 825389
 		},
 		{
+			"id": 49,
+			"categoryId": 9,
+			"iconId": 22,
+			"colorId": 1,
+			"descriptionId": 847595,
+			"defaultEnable": true,
+			"defaultSound": true,
+			"defaultMultiAccount": true,
+			"defaultNotify": true,
+			"name": "ACHIEVEMENT_UNLOCKED",
+			"messageId": 847594
+		},
+		{
+			"id": 50,
+			"categoryId": 9,
+			"iconId": 22,
+			"colorId": 1,
+			"descriptionId": 847603,
+			"defaultEnable": true,
+			"defaultSound": true,
+			"defaultMultiAccount": true,
+			"defaultNotify": true,
+			"name": "QUEST_VALIDATED",
+			"messageId": 847602
+		},
+		{
 			"id": 51,
 			"categoryId": 8,
 			"iconId": 28,

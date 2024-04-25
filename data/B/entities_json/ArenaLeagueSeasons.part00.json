@@ -13,10 +13,6 @@
 					"type": -5
 				},
 				{
-					"name": "seasonNumber",
-					"type": -1
-				},
-				{
 					"name": "beginning",
 					"type": -4
 				},
@@ -39,7 +35,6 @@
 		{
 			"uid": 28,
 			"nameId": 1057974,
-			"seasonNumber": 9,
 			"beginning": 1701734400000.0,
 			"closure": 1711411200000.0,
 			"resetDate": -3600000.0,
@@ -48,7 +43,6 @@
 		{
 			"uid": 60,
 			"nameId": 1068065,
-			"seasonNumber": 14,
 			"beginning": 1711411200000.0,
 			"closure": 1718665200000.0,
 			"resetDate": -3600000.0,

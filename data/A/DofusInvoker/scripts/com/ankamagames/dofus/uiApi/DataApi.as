@@ -1322,12 +1322,12 @@ package com.ankamagames.dofus.uiApi
          return ServerSeason.getCurrentSeason();
       }
       
-      public function getCurrentTemporisSeasonNumber() : int
+      public function getCurrentTemporisSeasonId() : int
       {
          var season:ServerSeason = this.getCurrentTemporisSeason();
          if(season)
          {
-            return season.seasonNumber;
+            return season.uid;
          }
          return -1;
       }

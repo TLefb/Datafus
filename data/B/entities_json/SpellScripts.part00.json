@@ -68734,6 +68734,111 @@
 			"id": 16579,
 			"typeId": 1,
 			"rawParams": "animId:705,targetGfxId:7602,targetGfxDisplayType:2"
+		},
+		{
+			"id": 16825,
+			"typeId": 1,
+			"rawParams": "targetGfxId:6828,targetGfxId2:6815"
+		},
+		{
+			"id": 16826,
+			"typeId": 1,
+			"rawParams": "targetGfxId:6755"
+		},
+		{
+			"id": 16827,
+			"typeId": 1,
+			"rawParams": "targetGfxId:1407"
+		},
+		{
+			"id": 16828,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:4528,targetGfxDisplayType:2"
+		},
+		{
+			"id": 16829,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:4501"
+		},
+		{
+			"id": 16830,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:3103,targetGfxId2:4544"
+		},
+		{
+			"id": 16831,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:7339,targetGfxId2:4544"
+		},
+		{
+			"id": 16833,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:3678,targetGfxId2:4544"
+		},
+		{
+			"id": 16834,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:5010"
+		},
+		{
+			"id": 16835,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:5115"
+		},
+		{
+			"id": 16836,
+			"typeId": 1,
+			"rawParams": "animId:1,targetGfxId:3897,targetGfxId2:7453"
+		},
+		{
+			"id": 16837,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:4468"
+		},
+		{
+			"id": 16838,
+			"typeId": 1,
+			"rawParams": "animId:1,targetGfxId:4709"
+		},
+		{
+			"id": 16839,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:7529"
+		},
+		{
+			"id": 16840,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:4744,targetGfxDisplayType:2"
+		},
+		{
+			"id": 16841,
+			"typeId": 1,
+			"rawParams": "animId:1,targetGfxId:5755"
+		},
+		{
+			"id": 16842,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:6848,targetGfxDisplayType:2"
+		},
+		{
+			"id": 16843,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:3684"
+		},
+		{
+			"id": 16844,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:5505"
+		},
+		{
+			"id": 16845,
+			"typeId": 1,
+			"rawParams": "animId:1,targetGfxId:4501"
+		},
+		{
+			"id": 16846,
+			"typeId": 1,
+			"rawParams": "animId:0,targetGfxId:4863"
 		}
 	]
 }

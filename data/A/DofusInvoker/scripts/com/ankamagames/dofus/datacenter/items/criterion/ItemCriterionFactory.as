@@ -260,7 +260,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
                criterion = new SubareaLevelItemCriterion(pServerCriterionForm);
                break;
             case "ST":
-               criterion = new ServerSeasonTemporisCriterion(pServerCriterionForm);
+               criterion = new SeasonCriterion(pServerCriterionForm);
                break;
             case "Sy":
                criterion = new CommunityItemCriterion(pServerCriterionForm);

@@ -9,8 +9,6 @@ package com.ankamagames.dofus.datacenter.seasons
       
       public var uid:int;
       
-      public var seasonNumber:uint;
-      
       public var beginning:Number;
       
       public var closure:Number;

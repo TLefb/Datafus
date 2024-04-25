@@ -783,7 +783,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          var gisredmsg:GuildInvitationStateRecrutedMessage = null;
          var gjmsg:GuildJoinedMessage = null;
          var joinMessage:String = null;
-         var seasonNumber:int = 0;
+         var seasonId:int = 0;
          var gigmsg:GuildInformationsGeneralMessage = null;
          var gimumsg:GuildInformationsMemberUpdateMessage = null;
          var member:GuildMemberInfo = null;
@@ -1716,10 +1716,10 @@ package com.ankamagames.dofus.logic.game.common.frames
                KernelEventsManager.getInstance().processCallback(SocialHookList.GuildMembershipUpdated,true);
                joinMessage = I18n.getUiText("ui.guild.JoinGuildMessage",[gjmsg.guildInfo.guildName]);
                KernelEventsManager.getInstance().processCallback(ChatHookList.TextInformation,joinMessage,ChatActivableChannelsEnum.PSEUDO_CHANNEL_INFO,TimeManager.getInstance().getTimestamp());
-               seasonNumber = !!ServerSeason.getCurrentSeason() ? int(ServerSeason.getCurrentSeason().seasonNumber) : -1;
-               if(PlayerManager.getInstance().server.gameTypeId == GameServerTypeEnum.SERVER_TYPE_TEMPORIS && seasonNumber == 5)
+               seasonId = !!ServerSeason.getCurrentSeason() ? int(ServerSeason.getCurrentSeason().uid) : -1;
+               if(PlayerManager.getInstance().server.gameTypeId == GameServerTypeEnum.SERVER_TYPE_TEMPORIS && seasonId == 14)
                {
-                  notificationId = NotificationManager.getInstance().prepareNotification(I18n.getUiText("ui.social.xpGuild"),I18n.getUiText("ui.social.modifyXpGuild"),NotificationTypeEnum.TUTORIAL,"temporisXpGuild_T" + seasonNumber);
+                  notificationId = NotificationManager.getInstance().prepareNotification(I18n.getUiText("ui.social.xpGuild"),I18n.getUiText("ui.social.modifyXpGuild"),NotificationTypeEnum.TUTORIAL,"temporisXpGuild_T" + seasonId);
                   NotificationManager.getInstance().addButtonToNotification(notificationId,I18n.getUiText("ui.common.modify"),"OpenSocialAction",[DataEnum.SOCIAL_TAB_GUILD_ID]);
                   NotificationManager.getInstance().sendNotification(notificationId);
                }
