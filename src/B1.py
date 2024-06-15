@@ -51,15 +51,15 @@ class D2OReader():
     def readMagic(self):
         return self.readBytes(3)
 
-    def readInt(self):
+    def readInt(self, field=None):
         r = struct.unpack('>i', self.readBytes(4))
         return r[0]
 
-    def readUint(self):
+    def readUint(self, field=None):
         r = struct.unpack('>I', self.readBytes(4))
         return r[0]
 
-    def readDouble(self):
+    def readDouble(self, field=None):
         r = struct.unpack('>d', self.readBytes(8))
         value = r[0]
         return None if math.isnan(value) else value  # Check for NaN and replace it
@@ -68,14 +68,14 @@ class D2OReader():
         r = struct.unpack('>h', self.readBytes(2))
         return r[0]
 
-    def readBool(self):
+    def readBool(self, field=None):
         r = struct.unpack('>?', self.readBytes(1))
         return r[0]
 
-    def readUtf(self):
+    def readUtf(self, field=None):
         return self.readBytes(self.readShort()).decode()
 
-    def readI18N(self):
+    def readI18N(self, field=None):
         return self.readUint()
 
     def readVector(self):
@@ -133,7 +133,7 @@ class D2OReader():
             else:
                 func = self.fieldType.get(fieldType)
                 if func:
-                    obj_value = func()
+                    obj_value = func(field=field)
                 else:
                     obj_value = None  # Assume None for undefined type handlers or bad data
 
